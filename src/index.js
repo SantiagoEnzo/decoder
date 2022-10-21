@@ -10,7 +10,7 @@ const mensaje = "Ctrl + v en cualquier parte \n"
 
 function decodePDF(p){
 let text = Buffer.from(p, 'base64')
-if (text.toString('utf-8',1,4)=='PDF'){
+if (text.toString('utf-8',1,4)==='PDF'){
 let pdf = new Blob([text],{ type: "application/pdf" });
 let pdfURL = URL.createObjectURL(pdf);
 window.open(pdfURL);
